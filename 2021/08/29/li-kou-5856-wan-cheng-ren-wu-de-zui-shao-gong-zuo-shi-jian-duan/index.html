@@ -446,16 +446,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">动态规划</span>
+                            </a>
+                        
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/dfs/">
-                                <span class="chip bg-color">dfs</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">贪心算法</span>
+                            <a href="/tags/%E7%8A%B6%E5%8E%8Bdp/">
+                                <span class="chip bg-color">状压dp</span>
                             </a>
                         
                     </div>
@@ -486,7 +486,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-29
+                    2021-08-30
                 </div>
                 
 
@@ -495,7 +495,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -518,7 +518,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 第一次参加力扣周赛，感觉前两道题都是送分题，结果被第三题卡了剩下所有的时间。一开始只想到最简单的贪心，尝试失败后才想起来dfs，还是dfs思路不够清晰。此外在代码细节处理得也不好，根据出错的样例不断调试后，才在比赛结束15分钟提交通过。</p>
+                <p> 第一次参加力扣周赛，感觉前两道题都是送分题，结果被第三题卡了剩下所有的时间。一开始只想到最简单的贪心，尝试失败后才想起来dfs，还是dfs思路不够清晰。此外在代码细节处理得也不好，根据出错的样例不断调试后，才在比赛结束15分钟提交通过。参考题解后发现经典做法是状态压缩动态规划，经理解后在此将两份代码都记录下来。</p>
 <p>题干如下：</p>
 <hr>
 <h3 id="5856-完成任务的最少工作时间段"><a href="#5856-完成任务的最少工作时间段" class="headerlink" title="5856. 完成任务的最少工作时间段"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/">5856. 完成任务的最少工作时间段</a></h3><p>Difficulty: <strong>中等</strong></p>
@@ -558,7 +558,7 @@
 <li>  <code>max(tasks[i]) &lt;= sessionTime &lt;= 15</code></li>
 </ul>
 <hr>
-<h4 id="我的Solution"><a href="#我的Solution" class="headerlink" title="我的Solution"></a>我的Solution</h4><p>Language: ****</p>
+<h4 id="dfs-贪心"><a href="#dfs-贪心" class="headerlink" title="dfs+贪心"></a>dfs+贪心</h4><p>Language: ****</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstdio&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;vector&gt;</span></span>
@@ -614,6 +614,39 @@
 	cout <span class="token operator">&lt;&lt;</span> <span class="token function">minSessions</span><span class="token punctuation">(</span>tasks<span class="token punctuation">,</span> sessionTime<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<h4 id="状压dp"><a href="#状压dp" class="headerlink" title="状压dp"></a>状压dp</h4><p>Language: ****</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">//dp[i]表示到达状态i所需的最小时间段数，i为二进制表示的状态集合。</span>
+    <span class="token keyword">int</span> <span class="token function">minSessions</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> tasks<span class="token punctuation">,</span> <span class="token keyword">int</span> sessionTime<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> n<span class="token operator">=</span>tasks<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> SN<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>n<span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">sum</span><span class="token punctuation">(</span>SN<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//记录每个状态的总时间</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>SN<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&amp;</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    sum<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>sum<span class="token punctuation">[</span>i<span class="token operator">^</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">+</span>tasks<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//该状态的总时间可由其子集转移得到</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">dp</span><span class="token punctuation">(</span>SN<span class="token punctuation">,</span><span class="token number">0x3f3f3f3f</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//状压dp数组</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>SN<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span>i<span class="token punctuation">;</span>j<span class="token punctuation">;</span>j<span class="token operator">=</span>i<span class="token operator">&amp;</span><span class="token punctuation">(</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">//枚举二进制子集，记住！</span>
+                <span class="token comment">//当子集j中的所有任务可以放在一个时间段内时，就可以通过在状态i^j的基础上加一个时间段而到达状态i</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>sum<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&lt;=</span>sessionTime<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">min</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">^</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> dp<span class="token punctuation">[</span>SN<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -679,16 +712,16 @@
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">动态规划</span>
+                                </a>
+                            
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/dfs/">
-                                    <span class="chip bg-color">dfs</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">贪心算法</span>
+                                <a href="/tags/%E7%8A%B6%E5%8E%8Bdp/">
+                                    <span class="chip bg-color">状压dp</span>
                                 </a>
                             
                         </div>
@@ -1064,7 +1097,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">8.2k</span>
+                        class="white-color">10.4k</span>
             
             
             
