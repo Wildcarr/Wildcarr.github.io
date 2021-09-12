@@ -362,11 +362,11 @@
                 </a>
                 
                 
-                <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解: 18">
+                <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解: 34">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             style="background-color: #F5EEF8;">题解
-                        <span class="tag-length">18</span>
+                        <span class="tag-length">34</span>
                     </span>
                 </a>
                 
@@ -380,11 +380,20 @@
                 </a>
                 
                 
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构: 1">
+                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #E8F8F5;">数据结构
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="知识总结: 6">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">知识总结
+                        <span class="tag-length">6</span>
                     </span>
                 </a>
                 
@@ -402,26 +411,25 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/25/luo-gu-p1462-tong-wang-ao-ge-rui-ma-de-dao-lu/">
+                    <a href="/2021/09/03/luo-gu-p3397-di-tan/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="洛谷P1462 通往奥格瑞玛的道路">
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="洛谷P3397 地毯">
                             
-                            <span class="card-title">洛谷P1462 通往奥格瑞玛的道路</span>
+                            <span class="card-title">洛谷P3397 地毯</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                 该题为Dijkstra+二分查找的典型题，对最大路费进行二分查找，通过设置vis数组的方式屏蔽路费大于当前二分值的节点。代码如下：
-#define _CRT_SECURE_NO_WARNINGS
-#include&lt;iostream&
+                                 原题为P3397 地毯 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)，参考老K的题解。
+差分主要用于优化区间编辑操作的时间。本题可用一维或二维差分做，一维就是将每一行作为一个单位，二维将整体作为一个单位。二维的优点在于
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-03
                             </span>
                             <span class="publish-author">
                                 
@@ -443,16 +451,8 @@
                             <span class="chip bg-color">洛谷</span>
                         </a>
                         
-                        <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                            <span class="chip bg-color">二分查找</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98/">
-                            <span class="chip bg-color">最短路问题</span>
-                        </a>
-                        
-                        <a href="/tags/Dijkstra%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">Dijkstra算法</span>
+                        <a href="/tags/%E5%B7%AE%E5%88%86/">
+                            <span class="chip bg-color">差分</span>
                         </a>
                         
                     </div>
@@ -462,25 +462,82 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/25/luo-gu-p1352-mei-you-shang-si-de-wu-hui/">
+                    <a href="/2021/09/03/luo-gu-p1120-xiao-mu-gun-shu-ju-jia-qiang-ban/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="洛谷P1352 没有上司的舞会">
+                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="洛谷P1120 小木棍 ［数据加强版］">
                             
-                            <span class="card-title">洛谷P1352 没有上司的舞会</span>
+                            <span class="card-title">洛谷P1120 小木棍 ［数据加强版］</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                 本题为树形dp的模板题，类似力扣中的打家劫舍问题。参考了BlueArc的题解。
-树形dp即数据的逻辑结构为树形，一般用递归函数解题，先递归处理孩子结点，然后根据孩子结点的结果处理父节点。本题中dp数组仍可定义为线性，只要将数据在逻辑上整理
+                                 原题为P1120 小木棍 ［数据加强版］ - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
+本题重点考查搜索的剪枝，我学习了Kaori的许多代码优化思路，收益匪浅，对dalao表示感谢！
+#define _CRT_SECU
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-03
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E8%A7%A3/" class="post-category">
+                                    题解
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                            <span class="chip bg-color">洛谷</span>
+                        </a>
+                        
+                        <a href="/tags/dfs/">
+                            <span class="chip bg-color">dfs</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%90%9C%E7%B4%A2%E7%9A%84%E5%89%AA%E6%9E%9D/">
+                            <span class="chip bg-color">搜索的剪枝</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/09/03/luo-gu-p1270-fang-wen-mei-zhu-guan/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="洛谷P1270 “访问”美术馆">
+                            
+                            <span class="card-title">洛谷P1270 “访问”美术馆</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 原题为P1270 “访问”美术馆 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
+这道题的难点首先在于输入处理和树的结构的定义，其次是动态规划数组的定义和状态转移方程，最后还要用记忆化节约时间。代码参考橙子汁的题解。
+#
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-03
                             </span>
                             <span class="publish-author">
                                 
@@ -506,6 +563,10 @@
                             <span class="chip bg-color">树形dp</span>
                         </a>
                         
+                        <a href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">
+                            <span class="chip bg-color">记忆化搜索</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -513,28 +574,25 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/24/luo-gu-p1880-noi1995-shi-zi-he-bing/">
+                    <a href="/2021/09/03/luo-gu-p3177-haoi2015-shu-shang-ran-se/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="洛谷P1880 [NOI1995] 石子合并">
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="洛谷P3177 [HAOI2015]树上染色">
                             
-                            <span class="card-title">洛谷P1880 [NOI1995] 石子合并</span>
+                            <span class="card-title">洛谷P3177 [HAOI2015]树上染色</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                 本题考点为环形区间dp，参考Corrine的题解。
-#define _CRT_SECURE_NO_WARNINGS
-#include&lt;iostream&gt;
-#include&lt;cstdio&gt;
-#include&lt;c
+                                 原题为P3177 HAOI2015树上染色 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
+这是一道很硬的树上背包题，代码中有很多细节令我思考理解了很久，理解这道题会对熟练掌握哦树上背包有很大帮助。注释主要阐述细节，整体
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-03
                             </span>
                             <span class="publish-author">
                                 
@@ -554,6 +612,186 @@
                         
                         <a href="/tags/%E6%B4%9B%E8%B0%B7/">
                             <span class="chip bg-color">洛谷</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%A0%91%E5%BD%A2dp/">
+                            <span class="chip bg-color">树形dp</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%A0%91%E4%B8%8A%E8%83%8C%E5%8C%85/">
+                            <span class="chip bg-color">树上背包</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/09/01/luo-gu-p2585-zjoi2006-san-se-er-cha-shu/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="洛谷P2585 [ZJOI2006]三色二叉树">
+                            
+                            <span class="card-title">洛谷P2585 [ZJOI2006]三色二叉树</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 原题为P2585 三色二叉树 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn) 。
+树状dp的模板题，参考hs_black的题解，该代码提供了一个清晰的思路，即对于节点的每一种可行的状态，都单独定义一个dp数组的维度，如本
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E8%A7%A3/" class="post-category">
+                                    题解
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                            <span class="chip bg-color">洛谷</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%A0%91%E7%8A%B6dp/">
+                            <span class="chip bg-color">树状dp</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/09/01/luo-gu-p1273-you-xian-dian-shi-wang/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="洛谷P1273 有线电视网">
+                            
+                            <span class="card-title">洛谷P1273 有线电视网</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 原题为P1273 有线电视网 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)
+题解可以参考HY的小可爱，只要搞清这道题为什么是分组背包，再按照分组背包的模板就很容易理解了。指路题解 P1273 【有线电视网】 - Fai
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E8%A7%A3/" class="post-category">
+                                    题解
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                            <span class="chip bg-color">洛谷</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
+                            <span class="chip bg-color">背包问题</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%A0%91%E5%BD%A2dp/">
+                            <span class="chip bg-color">树形dp</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85/">
+                            <span class="chip bg-color">分组背包</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/08/31/luo-gu-p4302-scoi2003-zi-fu-chuan-zhe-die/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="洛谷P4302 [SCOI2003]字符串折叠">
+                            
+                            <span class="card-title">洛谷P4302 [SCOI2003]字符串折叠</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 经典区间dp题，有很好的学习解题思路的作用！
+#define _CRT_SECURE_NO_WARNINGS
+#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;algo
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-31
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E8%A7%A3/" class="post-category">
+                                    题解
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%B4%9B%E8%B0%B7/">
+                            <span class="chip bg-color">洛谷</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
                         </a>
                         
                         <a href="/tags/%E5%8C%BA%E9%97%B4dp/">
@@ -567,26 +805,25 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/24/luo-gu-p5020-noip2018-ti-gao-zu-huo-bi-xi-tong/">
+                    <a href="/2021/08/30/luo-gu-p5490-mo-ban-sao-miao-xian/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="洛谷P5020 [NOIP2018 提高组] 货币系统">
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="洛谷P5490 【模板】扫描线">
                             
-                            <span class="card-title">洛谷P5020 [NOIP2018 提高组] 货币系统</span>
+                            <span class="card-title">洛谷P5490 【模板】扫描线</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                 参考0x3喵酱的代码。
-等价的最小货币系统就是将原货币系统中，所有可被其他面额表示的面额去掉后的状态，因此该问题可归结为完全背包问题，即将每个面额都视为背包，探究其是否可被比它更小的面额装满。具体实现参考代码注释：
-#define _CR
+                                 参考NCC79601的题解。其中每个线段树节点表示一个x轴方向的区间，其属性len表示这个区间内当前被覆盖的总长度。有了根结点的len即总长度，再乘以y轴方向上当前边与其上方的边之间的距离Δy，就是当前扫描区域的面积。
+#define _
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
                             </span>
                             <span class="publish-author">
                                 
@@ -608,12 +845,16 @@
                             <span class="chip bg-color">洛谷</span>
                         </a>
                         
-                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
+                        <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+                            <span class="chip bg-color">线段树</span>
                         </a>
                         
-                        <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
-                            <span class="chip bg-color">背包问题</span>
+                        <a href="/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/">
+                            <span class="chip bg-color">扫描线</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/">
+                            <span class="chip bg-color">状态压缩</span>
                         </a>
                         
                     </div>
@@ -623,29 +864,26 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/24/luo-gu-p1757-tong-tian-zhi-fen-zu-bei-bao/">
+                    <a href="/2021/08/30/luo-gu-p3373-mo-ban-xian-duan-shu-2/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="洛谷P1757 通天之分组背包">
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="洛谷P3373 【模板】线段树 2">
                             
-                            <span class="card-title">洛谷P1757 通天之分组背包</span>
+                            <span class="card-title">洛谷P3373 【模板】线段树 2</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                 题目主要考察分组背包，参考yuzhechuan的题解。
-分组背包的一维dp的模板为
-for 所有的组k
-    for v=V..0 //背包容量
-        for 所有的i属于组k
-　　　　　　f[v]=max{f[v],f[v-
+                                 线段树是一种高级数据结构，它的区间操作、查询和单点操作、查询的时间复杂度为O(logn)。通过这道题，我们来学习线段树的写法。（参考zhuwanman的题解）
+#define _CRT_SECURE_NO_WARNINGS
+#includ
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
                             </span>
                             <span class="publish-author">
                                 
@@ -667,12 +905,8 @@ for 所有的组k
                             <span class="chip bg-color">洛谷</span>
                         </a>
                         
-                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                            <span class="chip bg-color">动态规划</span>
-                        </a>
-                        
-                        <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
-                            <span class="chip bg-color">背包问题</span>
+                        <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+                            <span class="chip bg-color">线段树</span>
                         </a>
                         
                     </div>
@@ -682,26 +916,76 @@ for 所有的组k
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/08/24/luo-gu-p2679-noip2015-ti-gao-zu-zi-chuan/">
+                    <a href="/2021/08/30/li-kou-940-bu-tong-de-zi-xu-lie-ii/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="洛谷P2679 [NOIP2015 提高组] 子串">
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="力扣940. 不同的子序列 II">
                             
-                            <span class="card-title">洛谷P2679 [NOIP2015 提高组] 子串</span>
+                            <span class="card-title">力扣940. 不同的子序列 II</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                 这道题的状态转移想起来很绕，所以记录一下自己对它的理解，参考了frankchenfu的题解。
-首先，每个状态需要记录的信息包括A串匹配到的位置i，B串匹配到的位置j，当前所用的子串数p和是否使用了A[i]。即定义dp数组为：
-int f[
+                                940. 不同的子序列 IIDifficulty: 困难
+给定一个字符串 s，计算 s 的 不同非空子序列 的个数。因为结果可能很大，所以返回答案需要对**10^9 + 7 取余** 。
+字符串的 子序列 是经由原字符串删除一些（也可能不删
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E8%A7%A3/" class="post-category">
+                                    题解
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                            <span class="chip bg-color">力扣</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/08/30/luo-gu-p2704-noi2001-pao-bing-zhen-di/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="洛谷P2704 [NOI2001] 炮兵阵地">
+                            
+                            <span class="card-title">洛谷P2704 [NOI2001] 炮兵阵地</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 本题是状态压缩动态规划的经典题目，看着SSHhh的题解打了两个小时，终于在把整体思路全部摸清并且对代码作了优化的情况下过了。其中每行的炮兵分布为一个状态，一个状态的二进制表示中，某一位为1，表示这个位置有炮兵。本题在相邻行间作状态的转移。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
                             </span>
                             <span class="publish-author">
                                 
@@ -725,6 +1009,64 @@ int f[
                         
                         <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
                             <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%8A%B6%E5%8E%8Bdp/">
+                            <span class="chip bg-color">状压dp</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/08/29/li-kou-5856-wan-cheng-ren-wu-de-zui-shao-gong-zuo-shi-jian-duan/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="力扣5856. 完成任务的最少工作时间段">
+                            
+                            <span class="card-title">力扣5856. 完成任务的最少工作时间段</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 第一次参加力扣周赛，感觉前两道题都是送分题，结果被第三题卡了剩下所有的时间。一开始只想到最简单的贪心，尝试失败后才想起来dfs，还是dfs思路不够清晰。此外在代码细节处理得也不好，根据出错的样例不断调试后，才在比赛结束15分钟提交通过。参
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%A2%98%E8%A7%A3/" class="post-category">
+                                    题解
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                            <span class="chip bg-color">力扣</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%8A%B6%E5%8E%8Bdp/">
+                            <span class="chip bg-color">状压dp</span>
                         </a>
                         
                     </div>
@@ -748,11 +1090,12 @@ int f[
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 2</div>
+            <div class="center-align b-text-gray">2 / 3</div>
         </div>
         <div class="col s6 m4 l4">
             
-            <a class="right btn-floating btn-large disabled">
+            <a href="/categories/%E9%A2%98%E8%A7%A3/page/3/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
                 <i class="fas fa-angle-right"></i>
             </a>
             
@@ -834,7 +1177,7 @@ int f[
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.1k</span>
+                        class="white-color">33.2k</span>
             
             
             
