@@ -482,7 +482,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-28
+                    2021-09-13
                 </div>
                 
 
@@ -514,7 +514,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 本题是一道思路比较简单的并查集题，我想记录这道题并不是因为它很难，而是因为有很多代码细节需要注意，我在做的时候也踩了很多坑，写下来也是提醒自己。</p>
+                <p> 原题为<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3958">P3958 NOIP2017 提高组 奶酪 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a>。本题是一道思路比较简单的并查集题，我想记录这道题并不是因为它很难，而是因为有很多代码细节需要注意，我在做的时候也踩了很多坑，写下来也是提醒自己。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">_CRT_SECURE_NO_WARNINGS</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstdio&gt;</span></span>
@@ -533,7 +533,7 @@ ll T<span class="token punctuation">,</span> n<span class="token punctuation">,<
 		<span class="token keyword">if</span> <span class="token punctuation">(</span>z <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> bot <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 		<span class="token keyword">if</span> <span class="token punctuation">(</span>h <span class="token operator">-</span> z <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> top <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token comment">//计算点的距离时不要开方，直接用long long存其平方的结果，因为开放会导致精度损失，会不能通过最后两个点</span>
+    <span class="token comment">//计算点的距离时不要开方，直接用long long存其平方的结果，因为开方会导致精度损失，会不能通过最后两个点</span>
 	ll <span class="token function">dist</span><span class="token punctuation">(</span><span class="token keyword">const</span> point <span class="token operator">&amp;</span>b<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
 		<span class="token keyword">return</span> <span class="token punctuation">(</span>x <span class="token operator">-</span> b<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>x <span class="token operator">-</span> b<span class="token punctuation">.</span>x<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>y <span class="token operator">-</span> b<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>y <span class="token operator">-</span> b<span class="token punctuation">.</span>y<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>z <span class="token operator">-</span> b<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>z <span class="token operator">-</span> b<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
@@ -1026,7 +1026,7 @@ ll T<span class="token punctuation">,</span> n<span class="token punctuation">,<
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">39.3k</span>
             
             
             

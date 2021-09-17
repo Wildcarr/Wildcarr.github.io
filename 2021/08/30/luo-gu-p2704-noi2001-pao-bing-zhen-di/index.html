@@ -486,7 +486,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-30
+                    2021-09-13
                 </div>
                 
 
@@ -495,7 +495,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -518,7 +518,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 本题是状态压缩动态规划的经典题目，看着<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/41262"><strong>SSHhh</strong></a>的题解打了两个小时，终于在把整体思路全部摸清并且对代码作了优化的情况下过了。其中每行的炮兵分布为一个状态，一个状态的二进制表示中，某一位为1，表示这个位置有炮兵。本题在相邻行间作状态的转移。<code>dp[i][j][p]</code>表示当前为第p行，上一行的状态为i，本行状态为j。dp时我们只需要用到上一行和上上行的状态，而上一行的dp数组就包括了上上行和上一行的状态信息，即只需要用到上一行的dp数组，因此可以用滚动数组。直接上代码：</p>
+                <p> 原题为<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2704">P2704 NOI2001 炮兵阵地 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a>。本题是状态压缩动态规划的经典题目，看着<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/41262"><strong>SSHhh</strong></a>的题解打了两个小时，终于在把整体思路全部摸清并且对代码作了优化的情况下过了。其中每行的炮兵分布为一个状态，一个状态的二进制表示中，某一位为1，表示这个位置有炮兵。本题在相邻行间作状态的转移。<code>dp[i][j][p]</code>表示当前为第p行，上一行的状态为i，本行状态为j。dp时我们只需要用到上一行和上上行的状态，而上一行的dp数组就包括了上上行和上一行的状态信息，即只需要用到上一行的dp数组，因此可以用滚动数组。直接上代码：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstdio&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;vector&gt;</span></span>
@@ -1045,7 +1045,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">39.3k</span>
             
             
             

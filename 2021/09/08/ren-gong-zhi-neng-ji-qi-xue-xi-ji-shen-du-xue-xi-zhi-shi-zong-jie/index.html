@@ -478,7 +478,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-09
+                    2021-09-15
                 </div>
                 
 
@@ -528,7 +528,7 @@
 <li>支持向量：距离超平面最近的几个训练样本点；</li>
 <li><strong>间隔</strong>：两个异类支持向量到超平面的距离之和，$ \gamma = \frac {2}{ \left | w \right| } $。</li>
 <li>目标：在正确分类的基础上，让间隔最大；</li>
-<li>求解其<strong>对偶</strong>问题(?)即可解出 $w$ 和 $b$ 。得到</li>
+<li>求解最大间隔的<strong>对偶</strong>问题(?)即可解出 $w$ 和 $b$ 。得到</li>
 </ul>
 <p>$ f(x)=w^T x + b = \sum_{i=1}^{m}a_i y_i x_i ^T x + b $</p>
 <p>并且上述过程需满足KKT条件(?)：</p>
@@ -545,7 +545,7 @@
 <p>$ \kappa(x_i,x_j)=\left&lt; \phi (x_i), \phi(x_j) \right&gt;=\phi (x_i^T) \phi(x_j),$ </p>
 </li>
 </ul>
-<p>​        即 $ x_i $ 与 $ x_j $ 在特征空间的内积等于它们在原始样本空间中通过函数 $ \kappa(\cdot , \cdot) $ 计算的结果，该函          数就是<strong>核函数</strong>，模型最优解也可通过训练样本的核函数展开；</p>
+<p>​        即 $ x_i $ 与 $ x_j $ 在特征空间的内积等于它们在原始样本空间中通过函数 $ \kappa(\cdot , \cdot) $ 计算的结果，该函数就是<strong>核函数</strong>，模型最优解也可通过训练样本的核函数展开；</p>
 <ul>
 <li>只要一个对称函数对应的核矩阵半正定，它就能作为核函数使用；</li>
 <li>“核函数选择”是支持向量机的最大变数，不同核函数映射到不同特征空间，关系到其性能；</li>
@@ -1069,7 +1069,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">39.3k</span>
             
             
             

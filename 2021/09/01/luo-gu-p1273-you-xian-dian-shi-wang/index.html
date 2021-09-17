@@ -494,7 +494,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-01
+                    2021-09-13
                 </div>
                 
 
@@ -539,7 +539,7 @@
 <span class="token keyword">const</span> <span class="token keyword">int</span> maxn <span class="token operator">=</span> <span class="token number">3000</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
 <span class="token keyword">int</span> val<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> dp<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> dp<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//dp[i][j]表示以i为根的子树服务j个观众时的最大收益</span>
 
 <span class="token keyword">struct</span> <span class="token class-name">toEdge</span> <span class="token punctuation">{</span>
 	<span class="token keyword">int</span> v<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
@@ -547,8 +547,8 @@
 vector<span class="token operator">&lt;</span>toEdge<span class="token operator">&gt;</span> son<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token comment">//返回值为root为根的子树中观众的总数量，用于其父节点的剪枝</span>
 <span class="token keyword">int</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	<span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">-</span> m <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		dp<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">-</span> m <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//为叶子结点</span>
+		dp<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">;</span> 
 		<span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 	<span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -1120,7 +1120,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">39.3k</span>
             
             
             

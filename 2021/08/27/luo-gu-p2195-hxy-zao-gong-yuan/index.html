@@ -486,7 +486,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-27
+                    2021-09-13
                 </div>
                 
 
@@ -495,7 +495,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -518,7 +518,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 这是令我饱受折磨的一道题，做完洛谷P5536 【XR-3】核心城市后做这道题，原本以为基本按照原思路写就行，结果只过了一个点。参考<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/270"><strong>违规用户名H9z3*Ge</strong></a>的题解后，理清了整体思路，就是用并查集表示连通分量，连通分量的树根结点记录这个连通分量的直径（记录在dis数组中，用两遍dfs或bfs求都可以），然后每次查询只在dis数组上操作即可。由于边权都是1，也就是新加的边引入的额外距离都相等，所以每次连接两个新节点时，只需选取相应连通分量中与其他结点的最远距离最近的点，也就是直径的中点。</p>
+                <p> 原题为<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2195">P2195 HXY造公园 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a>。这是令我饱受折磨的一道题，做完洛谷P5536 【XR-3】核心城市后做这道题，原本以为基本按照原思路写就行，结果只过了一个点。参考<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/270"><strong>违规用户名H9z3*Ge</strong></a>的题解后，理清了整体思路，就是用并查集表示连通分量，连通分量的树根结点记录这个连通分量的直径（记录在dis数组中，用两遍dfs或bfs求都可以），然后每次查询只在dis数组上操作即可。由于边权都是1，也就是新加的边引入的额外距离都相等，所以每次连接两个新节点时，只需选取相应连通分量中与其他结点的最远距离最近的点，也就是直径的中点。</p>
 <p>然而用dfs写了代码后仍然爆TLE和WA，改为bfs后也有TLE，题解中的bfs又难以理解，因此我又参考了<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/70178"><strong>noall</strong></a>的题解，才写出了正确而高效的代码，可见自己的实现能力和代码细节都还有待提升！！</p>
 <p>下面是我的最终代码：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">_CRT_SECURE_NO_WARNINGS</span></span>
@@ -1052,7 +1052,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">39.3k</span>
             
             
             

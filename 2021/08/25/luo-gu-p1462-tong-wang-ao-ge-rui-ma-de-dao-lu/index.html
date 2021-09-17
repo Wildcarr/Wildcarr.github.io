@@ -490,7 +490,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-25
+                    2021-09-13
                 </div>
                 
 
@@ -522,7 +522,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> 该题为Dijkstra+二分查找的典型题，对最大路费进行二分查找，通过设置vis数组的方式屏蔽路费大于当前二分值的节点。代码如下：</p>
+                <p> 原题为<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1462">P1462 通往奥格瑞玛的道路 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a>，该题为Dijkstra+二分查找的典型题，对最大路费进行二分查找，通过设置vis数组的方式屏蔽路费大于当前二分值的节点。代码如下：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">_CRT_SECURE_NO_WARNINGS</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;cstdio&gt;</span></span>
@@ -549,7 +549,7 @@ ll dis<span class="token punctuation">[</span>maxn<span class="token punctuation
 vector<span class="token operator">&lt;</span>toEdge<span class="token operator">&gt;</span> adj<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
 priority_queue<span class="token operator">&lt;</span>PAIR<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span>PAIR<span class="token operator">&gt;</span><span class="token punctuation">,</span>greater<span class="token operator">&lt;</span>PAIR<span class="token operator">&gt;&gt;</span> pq<span class="token punctuation">;</span>
 <span class="token keyword">bool</span> <span class="token function">dijkstra</span><span class="token punctuation">(</span><span class="token keyword">int</span> lim<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	<span class="token keyword">if</span> <span class="token punctuation">(</span>lim <span class="token operator">&lt;</span> f<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">//需要额外对f[n]作判断，因为即使vis[n]被设置为了true，它的距离仍会被其他通向它的路更新</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>lim <span class="token operator">&lt;</span> f<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">//需要额外对f[n]作判断，因为即使vis[n]被设置为了true，它的距离仍会被其他通向它的路更新。因为在更新距离时，并没有对被更新点的vis作检查。好像可以把vis的检查和设置放在更新距离时，就可以去掉此句，且运行速度更快。</span>
 	<span class="token function">memset</span><span class="token punctuation">(</span>dis<span class="token punctuation">,</span> <span class="token number">0x3f</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>dis<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">memset</span><span class="token punctuation">(</span>vis<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>vis<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	dis<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -1074,7 +1074,7 @@ priority_queue<span class="token operator">&lt;</span>PAIR<span class="token pun
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">39.3k</span>
             
             
             

@@ -478,7 +478,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-07
+                    2021-09-15
                 </div>
                 
 
@@ -487,7 +487,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -524,17 +524,17 @@
 </ul>
 <h3 id="IPV4地址"><a href="#IPV4地址" class="headerlink" title="IPV4地址"></a>IPV4地址</h3><ul>
 <li>32比特，分为ABCDE五类，均由网络号和主机号组成；</li>
-<li>A类：前八位为网络号，第一位为0，前八位范围1-126（即后面不为全零不为全一）；</li>
-<li>B类：前16位为网络号，前两位为10，前八位范围128-191（即后面为全零到全一）；</li>
-<li>C类：前24位为网络号，前三位为110，192-223（即后面为全零到全一）；</li>
-<li>D类：前四位为1110，224-239（即后面为全零到全一），多播地址；</li>
-<li>E类：前四位为1111，240-255（即后面为全零到全一），保留为今后使用；</li>
+<li>A类：前八位为网络号，第一位为0，前八位范围1-126（即后七位不为全零不为全一）；</li>
+<li>B类：前16位为网络号，前两位为10，前八位范围128-191（即后六位为全零到全一）；</li>
+<li>C类：前24位为网络号，前三位为110，192-223（即后五位为全零到全一）；</li>
+<li>D类：前四位为1110，224-239（即后四位为全零到全一），多播地址；</li>
+<li>E类：前四位为1111，240-255（即后四位为全零到全一），保留为今后使用；</li>
 <li>不可用地址：A类地址中，网络号字段全零的为保留地址，127为环回自检地址；B类中128.0不可指派，C类中192.0.0不可指派；</li>
 </ul>
 <ul>
 <li><p><strong>网络地址转换（NAT）</strong>是指通过将专用网络地址转换为公用网络地址，从而对外隐藏内部管理的IP地址；</p>
 </li>
-<li><p><strong>无分类域间路由选择（CIDR）</strong>；</p>
+<li><p><strong>无分类域间路由选择（CIDR）</strong>，基于可变长子网掩码来进行任意长度的前缀的分配的，前缀表示网络号，后面是主机号；</p>
 </li>
 <li><p><strong>地址解析协议（ARP）</strong>完成IP地址到MAC地址的映射； </p>
 </li>
@@ -570,9 +570,9 @@
 <li>差错检测；</li>
 <li>套接字Socket=(IP地址：端口号)</li>
 <li>TCP的应用：文件传输协议FTP、超文本传输协议HTTP、远程登录TELNET；</li>
-<li>UDP的应用：小文件传送协议TFTP、DNS、SNMP；</li>
+<li>UDP的应用：小文件传送协议TFTP、域名系统DNS；</li>
 </ul>
-<h3 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h3><ul>
+<h3 id="用户数据报协议UDP"><a href="#用户数据报协议UDP" class="headerlink" title="用户数据报协议UDP"></a>用户数据报协议UDP</h3><ul>
 <li><p>仅在IP的数据报服务之上增加了复用和分用以及差错检测；</p>
 </li>
 <li><p>面向报文，只添加首部就向下交付给IP层，一次发送一个报文，不合并不拆分；</p>
@@ -586,22 +586,22 @@
 <li>支持一对一、一对多、多对一、多对多的交互通信；</li>
 </ul>
 </li>
-<li><p>首部：源端口16位+目的端口16位+长度16位+校验和16位；</p>
+<li><p>首部：源端口16位（复用）+目的端口16位（分用）+长度16位+校验和16位（差错检测）；</p>
 </li>
 <li><p>数据单元称为数据报；</p>
 </li>
 </ul>
-<h3 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h3><ul>
+<h3 id="传输控制协议TCP"><a href="#传输控制协议TCP" class="headerlink" title="传输控制协议TCP"></a>传输控制协议TCP</h3><ul>
 <li>面向连接的传输层协议；</li>
 <li>每条TCP连接是点对点（一对一）的；</li>
 <li>提供可靠的交付服务，保证传送的数据无差错、不丢失、不重复且有序；</li>
-<li>提供全双工通信，设有发送缓存和接受缓存；</li>
+<li>提供全双工通信，设有发送缓存和接收缓存；</li>
 <li>面向字节流；</li>
 <li>报文长度根据接收方给出的窗口值和当前网络拥塞程度决定；</li>
 <li>传送的数据单元称为报文段；</li>
 <li>客户/服务器方式；</li>
-<li>TCP连接的建立（三次握手）：客户机：SYN=1，seq=x; 服务器：SYN=1，ACK=1，seq=y，ack=x+1； 客户机：ACK=1，seq=x+1,ack=y+1;</li>
-<li>TCP连接的释放（四次握手）：客户机：FIN=1，seq=u; 服务器：ACK=1，seq=v,ack=u+1; 服务器：FIN=1,ACK=1,seq=w,ack=u+1; 客户机：ACK=1，seq=u+1，ack=w+1，等待2MSL（最长报文段寿命），客户机进入CLOSED状态；</li>
+<li>TCP连接的建立（三次握手）：客户机：连接请求报文段：同步位SYN=1，初始序号seq=x; 服务器：确认报文段：SYN=1，确认位ACK=1，seq=y，确认号ack=x+1，<strong>为该TCP连接分配缓存和变量</strong>； 客户机：确认报文段：ACK=1，seq=x+1,ack=y+1，<strong>为该连接分配缓存和变量</strong>;</li>
+<li>TCP连接的释放（四次握手）：客户机连接释放报文段：终止位FIN=1，seq=u，<strong>停止发送数据，主动关闭TCP连接</strong>; 服务器确认：ACK=1，seq=v,ack=u+1，<strong>客户机到服务器方向连接释放</strong>；服务器连接释放报文段：FIN=1,ACK=1,<strong>seq=w</strong>,ack=u+1; 客户机确认报文段：ACK=1，seq=u+1，ack=w+1，<strong>等待2MSL（最长报文段寿命），客户机进入CLOSED状态</strong>；</li>
 <li>TCP可靠传输<ul>
 <li>序号：按字节编号  确认：期望收到的下一个报文段数据的第一个字节序号；</li>
 <li>重传：超时和冗余ACK导致重传；<ul>
@@ -612,17 +612,17 @@
 </ul>
 </li>
 <li>TCP流量控制：<ul>
-<li>接收方根据自己接受缓存的大小，通过设置确认报文段首部的窗口字段来将rwnd（接收窗口）通知给发送方；</li>
+<li>接收方根据自己接收缓存的大小，通过设置确认报文段首部的窗口字段来将rwnd（接收窗口）通知给发送方；</li>
 <li>发送方根据对当前网络拥塞程度的估计确定拥塞窗口cwnd，cwnd在拥塞控制中设置；</li>
 <li>发送窗口的实际大小取min(rwnd,cwnd);</li>
 </ul>
 </li>
 <li>TCP拥塞控制（设置cwnd）<ul>
-<li>慢开始算法：先令cwnd=1，没收到一个对新报文段的确认后，将cwnd加1。如此每经过一个RTT，cwnd加倍，直到cnd增大到慢开始门限ssthresh（不能越过），改用拥塞避免算法；</li>
+<li>慢开始算法：先令cwnd=1，每收到一个对新报文段的确认后，将cwnd加1。如此每经过一个RTT，cwnd加倍，直到cwnd增大到慢开始门限ssthresh（不能越过），改用拥塞避免算法；</li>
 <li>拥塞避免算法：每经过一个RTT将cwnd加1而不是加倍。</li>
 <li>网络拥塞的处理：把慢开始门限ssthresh设为出现拥塞时cwnd的一半，然后置cwnd=1，执行慢开始算法；</li>
 <li>快重传和快恢复算法是对慢开始和拥塞避免算法的改进；</li>
-<li>快重传：当发送方连续收到三个重复的ACK报文时，直接重传对方未收到的报文段，而不必等待重传计时器超时；</li>
+<li>快重传：当发送方连续收到三个冗余ACK报文时，直接重传对方未收到的报文段，而不必等待重传计时器超时；</li>
 <li>快恢复：发送方连续收到三个冗余ACK时，将ssthresh设置为当前cwnd的一半，且由于认为网络很可能没有发生严重拥塞，将cwnd设置为ssthresh改变后的数值，并开始执行拥塞避免算法；</li>
 <li>总结：在TCP连接建立和网络出现超时时，采用慢开始和拥塞避免算法；发送方接收到冗余ACK时，采用快重传和快恢复算法；</li>
 </ul>
@@ -634,7 +634,7 @@
 <li>域名解析过程<ul>
 <li>把域名映射成IP地址或把IP地址映射成域名的过程；</li>
 <li>分为递归查询和递归与迭代相结合的查询；</li>
-<li>递归查询：本地域名服务器想根域名服务器查询一次，然后根域名服务器查询顶级域名服务器，顶级域名服务器查询权限域名服务器等，最后原路返回；给根域名服务器造成的负载过大；</li>
+<li>递归查询：本地域名服务器向根域名服务器查询一次，然后根域名服务器查询顶级域名服务器，顶级域名服务器查询权限域名服务器等，最后原路返回；给根域名服务器造成的负载过大；</li>
 <li>递归与迭代相结合的查询：主机向本地域名服务器查询采用递归查询，本地域名服务器向根域名服务器的查询采用迭代查询；</li>
 </ul>
 </li>
@@ -654,7 +654,7 @@
 <h3 id="超文本传输协议（HTTP）"><a href="#超文本传输协议（HTTP）" class="headerlink" title="超文本传输协议（HTTP）"></a>超文本传输协议（HTTP）</h3><ul>
 <li><p>用户单击鼠标后发生的事件</p>
 <ul>
-<li>浏览器分析链接指向页面的URL（<a target="_blank" rel="noopener" href="http://www.tsinghua.edu.cn/chn/index.htm%EF%BC%89%EF%BC%9B">http://www.tsinghua.edu.cn/chn/index.htm）；</a></li>
+<li>浏览器分析链接指向页面的URL（统一资源定位符）（<a target="_blank" rel="noopener" href="http://www.tsinghua.edu.cn/chn/index.htm%EF%BC%89%EF%BC%9B">http://www.tsinghua.edu.cn/chn/index.htm）；</a></li>
 <li>浏览器向DNS请求解析 <a target="_blank" rel="noopener" href="http://www.tsinghua.edu.cn/">www.tsinghua.edu.cn</a> 的IP地址；</li>
 <li>域名系统DNS解析出清华大学服务器的IP地址；</li>
 <li>浏览器与该服务器建立TCP连接（HTTP的默认端口号80）；</li>
@@ -1152,7 +1152,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">33.2k</span>
+                        class="white-color">39.3k</span>
             
             
             
