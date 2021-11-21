@@ -478,7 +478,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-15
+                    2021-09-21
                 </div>
                 
 
@@ -612,6 +612,11 @@
 <li>DCGAN：深度卷积GAN；cGAN：从分布 $ p(x|y) $ 中采样，而不是简单地从边缘分布 $ p(x) $ 中采样；</li>
 </ul>
 </li>
+<li><p>卷积网络的Params：$c_o(c_ik^2+1)$，其中一个卷积核大小为$c_ik^2$，共$c_o$个卷积核，且每个卷积核有一个bias；</p>
+</li>
+<li><p>卷积网络的FLOPs：，$(2c_ik^2-1)\cdot h’w’c_o$，如果加上bias则去掉-1，其中$h’w’c_o$对应输出特征图的每个位置，$2c_ik^2-1$对应一次卷积操作，它可以拆分为$(c_ik^2)+(c_ik^2-1)$，前一项是乘法运算数，后一项是加法运算数，如果加入bias，则在这次卷积操作的结果上再作一次加法；</p>
+</li>
+<li></li>
 </ul>
 
                 
@@ -1069,7 +1074,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">39.3k</span>
+                        class="white-color">45.7k</span>
             
             
             
