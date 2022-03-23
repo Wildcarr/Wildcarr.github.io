@@ -4,6 +4,94 @@
   
     
     <entry>
+      <title>PyTorch学习笔记</title>
+      <link href="/2022/03/23/pytorch-xue-xi-bi-ji/"/>
+      <url>/2022/03/23/pytorch-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<ul><li></li></ul><h2 id="tensor"><a href="#tensor" class="headerlink" title="tensor"></a>tensor</h2><ul><li>索引 … 表示遍历该维度的所有行</li></ul><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> t<span class="token operator">=</span>torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> ttensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.2214</span><span class="token punctuation">,</span> <span class="token number">0.1892</span><span class="token punctuation">,</span> <span class="token number">0.4655</span><span class="token punctuation">,</span> <span class="token number">0.8118</span><span class="token punctuation">]</span><span class="token punctuation">,</span>        <span class="token punctuation">[</span><span class="token number">0.4638</span><span class="token punctuation">,</span> <span class="token number">0.0621</span><span class="token punctuation">,</span> <span class="token number">0.3499</span><span class="token punctuation">,</span> <span class="token number">0.2318</span><span class="token punctuation">]</span><span class="token punctuation">,</span>        <span class="token punctuation">[</span><span class="token number">0.6071</span><span class="token punctuation">,</span> <span class="token number">0.6156</span><span class="token punctuation">,</span> <span class="token number">0.3000</span><span class="token punctuation">,</span> <span class="token number">0.6674</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> t<span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.8118</span><span class="token punctuation">,</span> <span class="token number">0.2318</span><span class="token punctuation">,</span> <span class="token number">0.6674</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> t<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 输出和上面一样</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.8118</span><span class="token punctuation">,</span> <span class="token number">0.2318</span><span class="token punctuation">,</span> <span class="token number">0.6674</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pytorch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux指令汇总</title>
+      <link href="/2022/03/23/linux-zhi-ling-hui-zong/"/>
+      <url>/2022/03/23/linux-zhi-ling-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<ul><li>kill某个用户所有进程</li></ul><pre class="line-numbers language-none"><code class="language-none">1.# pkill -u username2.# killall -u username3. ps列出ttlsa的pid，然后依次kill掉，比较繁琐.# ps -ef | grep ttlsa | awk '{ print $2 }' | sudo xargs kill -94. pgrep方式pgrep -u参数查出用户的所有pid，然后依次kill# pgrep -u ttlsa | sudo xargs kill -9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>kill某个用户的所有python进程</li></ul><pre class="line-numbers language-none"><code class="language-none"># killall -u username python<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>查询某个用户所有进程</li></ul><pre class="line-numbers language-none"><code class="language-none"># top -u username<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>xargs 用于将上个命令的输出作为该命令的输入，用法为</li></ul><pre class="line-numbers language-none"><code class="language-none"># somecommand |xargs -item command （-item的意义不清楚）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Excel使用技巧</title>
+      <link href="/2022/03/22/excel-shi-yong-ji-qiao/"/>
+      <url>/2022/03/22/excel-shi-yong-ji-qiao/</url>
+      
+        <content type="html"><![CDATA[<p>s</p><h3 id="连接表格"><a href="#连接表格" class="headerlink" title="连接表格"></a>连接表格</h3><p>根据某一列的内容连接两张表格</p><p>Sheet1：</p><p><img src="Excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220322105026.png" alt="微信截图_20220322105026"></p><p>Sheet2：</p><p><img src="Excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220322105313.png" alt="微信截图_20220322105313"></p><p>公式：在Sheet1的C2键入公式</p><pre class="line-numbers language-none"><code class="language-none">=VLOOKUP(A2,Sheet2!$A$2:$B$17,2,FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>其中<code>A2</code>是被lookup的值，<code>Sheet2!$A$2:$B$17</code>是查找范围（绝对位置），<code>2</code>是待拼接的列，<code>FALSE</code>表示非近似匹配（即精确匹配）。</p><p>连接结果如下：</p><p><img src="Excel%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.assets/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220322105917.png" alt="微信截图_20220322105917"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Office </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用python操作excel文件</title>
+      <link href="/2022/03/22/shi-yong-python-cao-zuo-excel-wen-jian/"/>
+      <url>/2022/03/22/shi-yong-python-cao-zuo-excel-wen-jian/</url>
+      
+        <content type="html"><![CDATA[<h3 id="xlrd"><a href="#xlrd" class="headerlink" title="xlrd"></a>xlrd</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">write_xls</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> sheet_name<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>    index <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>  <span class="token comment"># 获取需要写入数据的行数</span>    workbook <span class="token operator">=</span> xlwt<span class="token punctuation">.</span>Workbook<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 新建一个工作簿</span>    sheet <span class="token operator">=</span> workbook<span class="token punctuation">.</span>add_sheet<span class="token punctuation">(</span>sheet_name<span class="token punctuation">)</span>  <span class="token comment"># 在工作簿中新建一个表格</span>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>value<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>            sheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> value<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 像表格中写入数据（对应的行和列）</span>    workbook<span class="token punctuation">.</span>save<span class="token punctuation">(</span>path<span class="token punctuation">)</span>  <span class="token comment"># 保存工作簿</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"xls格式表格写入数据成功！"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="xlwt"><a href="#xlwt" class="headerlink" title="xlwt"></a>xlwt</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git学习笔记</title>
       <link href="/2021/10/05/git-xue-xi-bi-ji/"/>
       <url>/2021/10/05/git-xue-xi-bi-ji/</url>
