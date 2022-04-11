@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>PPT使用技巧</title>
+      <link href="/2022/04/09/ppt-shi-yong-ji-qiao/"/>
+      <url>/2022/04/09/ppt-shi-yong-ji-qiao/</url>
+      
+        <content type="html"><![CDATA[<ul><li>调整字号快捷键：ctrl+[ 和 ctrl+]</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度学习超参数作用</title>
+      <link href="/2022/04/06/shen-du-xue-xi-chao-can-shu-zuo-yong/"/>
+      <url>/2022/04/06/shen-du-xue-xi-chao-can-shu-zuo-yong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Weight-Decay"><a href="#Weight-Decay" class="headerlink" title="Weight Decay"></a>Weight Decay</h2><p>​        权重衰减是在模型的基础上添加L2 Loss时，L2 Loss前的系数。由于添加权重衰减wd后，权重衰减项wd*sum(W^2)对模型权重w的导数就变成了2*wd*w，相当于线性减小模型的权重，因此叫权重衰减。</p><p>​        权重衰减过大时，模型可能会一直无法训练好，而权重衰减过小时，训练时间会增长，合适的权重衰减可以减少模型训练时间并提高模型性能。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VSCode调试路径问题</title>
       <link href="/2022/04/03/vscode-diao-shi-lu-jing-wen-ti/"/>
       <url>/2022/04/03/vscode-diao-shi-lu-jing-wen-ti/</url>
